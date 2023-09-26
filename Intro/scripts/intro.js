@@ -1,7 +1,7 @@
 function sayHello(name){
     console.log("Hello" + name);
 
-    var color = "blue";
+    var color = "orange";
 }
 
 
@@ -14,34 +14,39 @@ function sum(num1, num2){
 
 
 function printNumbers(){
-//print numbers 1-20
-    for(let i =1; i<=20; i++){
-        if (i !==7 & i !==13){
-        console.log(i);
-    }
-}
-}
+//print numbers 1-10
+//except 3 and 7
 
+list = [121,1515,534,115,54,854,9752,3654,21,54,162,158];
 
-function basicCalculations(){
-    let numbers = [12,4,123,4567,234,56,12,87,124,865,233,788,43,91,544,782,653,845];
-    /**
-     * 1 - print every number
-     * 2 - print the sum of all numbers
-     * 3 - print how many numbers are greater than 500
-     */
-    let sum = 0;
-    let count = 0
-    for(let i=0; i<numbers.length; i++){
-    let num = numbers[i];
+for(let i=0; i<list.length;i++)
+{
+    let num = list[i];
+    console.log(num);
+}
+/**
+//      * 1 - print every number
+//      * 2 - print the sum of all numbers
+//      * 3 - print how many numbers are greater or equal to 200
+//      */
+let sum = 0;
+let count = 0
+    for(let i=0; i<list.length; i++){
+    let num = list[i];
     console.log(num);
     sum += num;
-    if(num > 500){
+    if(num >= 200){
         count+=1;
     }
     }
-    console.log("The total is:" + sum); // 10063
-    console.log("Numbers greater than 500:" + count); //7
+    console.log("The total is:" + sum);
+    console.log("Numbers greater than 200:" + count);
+
+for(let i =1; i<=10; i++){
+        if (i !==3 & i !==7){
+        console.log(i);
+    }
+}
 }
 
 /**
@@ -67,7 +72,7 @@ const result = sum(21,21);
 console.log(result);
 
 printNumbers();
-basicCalculations();
+
 }
 
 
